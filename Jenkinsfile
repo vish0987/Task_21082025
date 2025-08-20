@@ -5,18 +5,14 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                dir('devops_login') {
                     git branch: 'main',
                         url: 'https://github.com/sunil338/QA_tasks.git'
-                }
             }
         }
 
         stage('Build') {
             steps {
-                dir('devops_login') {
                     sh 'mvn clean install'
-                }
             }
         }
 
