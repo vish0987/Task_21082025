@@ -1,6 +1,6 @@
 - hosts: all
   become: yes
-  become_user: sunil
+  become_user: vish
   tasks:
     - name: Copy WAR to Tomcat
       copy:
