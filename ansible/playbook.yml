@@ -5,14 +5,14 @@
     - name: Copy WAR to Tomcat
       copy:
         src: /var/lib/jenkins/workspace/sonar-jen-ansi/Amazon-Web/target/Amazon.war
-        dest: /home/sunil/batch11/ansible/sonar/tomcat2/webapps
+        dest: /home/vish/B11-Traning/Tomcat3/webapps
         mode: '0644'
         remote_src: yes
 
     - name: Make Tomcat startup script executable
       file:
-        path: "/home/sunil/batch11/ansible/sonar/tomcat2/bin/startup.sh"
+        path: "/home/vish/B11-Traning/Tomcat3/bin/startup.sh"
         mode: '0755'
 
     - name: Start Tomcat
-      shell: /home/sunil/batch11/ansible/sonar/tomcat2/bin/startup.sh
+      shell: /home/vish/B11-Traning/Tomcat3/bin/startup.sh
